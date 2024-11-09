@@ -1,4 +1,4 @@
-# AIMS-Academic-Integrity-Management-System
+# AIMS - Academic Integrity Management System
 
 # Problem Statement:
 **University X**, a prestigious institution renowned for its **innovative IT programs**, faces significant challenges in maintaining **academic integrity** due to the rise of **generative AI technologies**. As these technologies become more common, the risk of **plagiarism** and the difficulty in verifying the **authenticity of student work** have increased. The university seeks effective solutions to **detect and prevent plagiarism**, ensure the **authenticity of student submissions**, and adapt to the rapid advancements in technology.
