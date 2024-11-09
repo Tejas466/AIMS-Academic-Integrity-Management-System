@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Academic Integrity Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .header {
+            background: #6a11cb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            transform: translateY(-100px);
+            animation: slideDown 0.5s ease-in-out forwards;
+        }
+        @keyframes slideDown {
+            to {
+                transform: translateY(0);
+            }
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .btn {
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #6a11cb;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to University X Portal</h1>
+    </div>
+    <div class="container">
+        <h2>Select Your Role</h2>
+        <a href="student-portal.html"><button class="btn">Student Portal</button></a>
+        <a href="teacher-portal.html"><button class="btn">Teacher Portal</button></a>
+    </div>
+</body>
+</html>

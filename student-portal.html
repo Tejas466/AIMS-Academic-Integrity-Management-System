@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Academic Integrity Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .header {
+            background: #2575fc;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            transform: translateY(-100px);
+            animation: slideDown 0.5s ease-in-out forwards;
+        }
+        @keyframes slideDown {
+            to {
+                transform: translateY(0);
+            }
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            background: #2575fc;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+            margin: 20px;
+        }
+        .btn:hover {
+            background: #6a11cb;
+        }
+        .assignments {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .assignment-item {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .assignment-item:last-child {
+            border-bottom: none;
+        }
+        .assignment-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .assignment-deadline {
+            color: #888;
+        }
+        .selected {
+            background-color: #e0f7fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Student Portal</h1>
+    </div>
+    <div class="container">
+        <h2>Your Assignments</h2>
+        <div class="assignments">
+            <div class="assignment-item" onclick="selectAssignment(this)">
+                <div class="assignment-title">Assignment 1: Data Structures</div>
+                <div class="assignment-deadline">Deadline: August 30, 2024, 5:00 PM</div>
+            </div>
+            <div class="assignment-item" onclick="selectAssignment(this)">
+                <div class="assignment-title">Assignment 2: Algorithms</div>
+                <div class="assignment-deadline">Deadline: September 15, 2024, 5:00 PM</div>
+            </div>
+            <!-- Add more assignments here as needed -->
+        </div>
+        <div class="fullscreen-container">
+            <button class="btn" onclick="startAssignment()">Start Assignment</button>
+        </div>
+    </div>
+    <script>
+        let selectedAssignment = null;
+
+        function selectAssignment(element) {
+            if (selectedAssignment) {
+                selectedAssignment.classList.remove('selected');
+            }
+            selectedAssignment = element;
+            selectedAssignment.classList.add('selected');
+        }
+
+        function startAssignment() {
+            if (selectedAssignment) {
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                }
+                window.location.href = 'assignment.html';
+            } else {
+                alert('Please select an assignment first.');
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>
